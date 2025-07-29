@@ -8,6 +8,7 @@ export type Props = TerminalRendererOptions & {
 };
 
 export default function Markdown({ children, ...options }: Props) {
-  setOptions({ renderer: new TerminalRenderer(options) });
-  return <Text>{parse(children).trim()}</Text>;
+  const renderer = new TerminalRenderer(options);
+  const parsed = parse(children, { renderer });
+  return <Text>{parsed.trim()}</Text>;
 }

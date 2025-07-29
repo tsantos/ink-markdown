@@ -10,7 +10,8 @@
     "declaration": true,
     "esModuleInterop": true,
     "jsx": "react",
-    "module": "commonjs",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "target": "ES2022",
     "outDir": "./build",
     "skipLibCheck": true
